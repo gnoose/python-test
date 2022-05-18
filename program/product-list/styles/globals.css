@@ -1,0 +1,81 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html {
+  font-size: 14px;
+  font-family: Poppins, sans-serif;
+}
+
+.btn {
+  @apply focus:outline-none focus:ring disabled:opacity-50 font-bold rounded-lg disabled:cursor-not-allowed;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-primary to-primary-75 focus:ring-primary-75 text-white;
+}
+
+.btn-warning {
+  @apply bg-gradient-to-r from-warning to-warning-75 focus:ring-warning-75 text-white;
+}
+
+.btn-danger {
+  @apply bg-danger hover:bg-danger-200 focus:ring-danger-75 text-white;
+}
+
+.btn-light {
+  @apply bg-light hover:bg-light-200 focus:ring-light-75 text-light-500;
+}
+
+.btn-info {
+  @apply bg-primary hover:bg-primary-200 focus:ring-primary-75 text-white;
+}
+
+.btn-lg {
+  @apply px-25 py-15 text-14 rounded-lg;
+}
+
+.btn-md {
+  @apply px-25 py-15 text-12 rounded-lg;
+}
+
+.btn-sm {
+  @apply px-25 py-10 text-10 rounded;
+}
+
+.btn-mini {
+  height: 30px;
+  @apply px-20 py-5 text-10 rounded-lg;
+}
+
+.input {
+  @apply px-10 py-5 text-14 rounded-lg;
+}
+
+/* spinner */
+.spinner .path {
+  stroke: #07A39D;
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
